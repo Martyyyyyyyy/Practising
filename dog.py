@@ -1,0 +1,2 @@
+def barking():
+    print('woooooof!')
