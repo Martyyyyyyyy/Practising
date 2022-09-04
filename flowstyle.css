@@ -1,48 +1,52 @@
 body {
     background-color: #FFF;
     margin: 0 auto;
-  }
+}
   
-  header {
+header {
     background-color: #466995;
     border-bottom: 1px solid #466995;
-  }
+    position: fixed;
+    width: 100%;
+}
   
-  ul {
+ul {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
-  }
+}
   
-  li {
+li {
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
-  }
+    display: inline-block;
+    width: 80px;
+}
   
-  li:hover {
+li:hover {
     color: #DBE9EE;
-  }
+}
   
-  h1 {
+h1 {
     color: #466995;
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
     font-weight: 300;
     text-transform: uppercase;
-  }
+}
   
-  h2 {
+h2 {
     color: #333;
     font-family: 'Varela Round', sans-serif;
     font-size: 26px;
     font-weight: 100;
     margin: 0 auto 20px auto;
-  }
+}
   
-  h3 {
+h3 {
     color: #466995;
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
@@ -50,9 +54,9 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     padding: 30px;
-  }
+}
   
-  h4 {
+h4 {
     color: #466995;
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
@@ -60,37 +64,46 @@ body {
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase
-  }
+}
   
-  p {
+p {
     color: #333;
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
   }
   
-  footer {
+footer {
     background-color: #DBE9EE;
     text-align: center;
-  }
+    height: 100px;
+}
   
-  .welcome {
+.welcome {
     background-color: #DBE9EE;
     box-sizing: border-box;
     padding: 40px;
     text-align: center;
     width: 100%;
-  }
+    position: relative;
+    top: 50px;
+}
   
-  .question {
+.question {
     text-align: center;
+    position: sticky;
+    top: 40px;
+    border: 15px solid #DBE9EE;
+    background-color: white;
+    clear: left;
   }
   
-  .answer {
+.answer {
     border: 1px solid #466995;
     margin: 20px;
-  }
+    display: inline-block;
+}
   
-  .answer:hover {
+.answer:hover {
     background: #C0D6DF;
     color: #FFF;
-  }
+}
