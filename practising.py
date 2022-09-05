@@ -33,7 +33,7 @@ def is_adult(age):
 # concatenation
 name = 'Martin' + ' is my name'
 # some casting 
-age =  str(25) 
+age = str(25) 
 """
 another comment but a verrrryyyyyyyyyyyyyyyyyyy 
 looooooooooooooooooooooonnnnnnnnnnngggggggggggggggggggggggggg
