@@ -121,3 +121,79 @@ for (let i = 0; i < rapperArray.length; i++){
   }
   
   console.log("And if you don't know, now you know.");
+//higher-order functions 
+const addTwo = num => {
+  return num + 2;
+}
+  
+const checkConsistentOutput = (func, val) => {
+  const checkA = val + 2;
+  const checkB = func(val);
+  if (checkA === checkB) {
+    return checkB;
+  } else {
+    console.log('inconsistent results');
+  }
+}
+  
+console.log(checkConsistentOutput(addTwo, 5));
+//Iterators
+const artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
+
+artists.forEach(artist => {
+  console.log(artist + ' is one of my favorite artists.');
+});
+
+const numbers = [1, 2, 3, 4, 5];
+
+const squareNumbers = numbers.map(number => {
+  return number * number;
+});
+
+console.log(squareNumbers);
+
+const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+
+const onlyNumbers = things.filter(thing => {
+  return typeof thing === 'number';
+});
+
+console.log(onlyNumbers);
+
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal => {
+  return animal === 'elephant';
+});
+
+const startsWithS = animals.findIndex(index => {
+  return index[0] === 's';
+});
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+console.log(words.some((word) => {
+  return word.length < 6;
+}));
+//more iterators
+const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
+
+const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+//  Choose a method that will return undefined
+cities.forEach(city => console.log('Have you visited ' + city + '?'));
+
+// Choose a method that will return a new array
+const longCities = cities.filter(city => city.length > 7);
+
+// Choose a method that will return a single value
+const word = cities.reduce((acc, currVal) => {
+  return acc + currVal[0]
+}, "C");
+
+console.log(word)
+
+// Choose a method that will return a new array
+const smallerNums = nums.map(num => num - 5);
+
+// Choose a method that will return a boolean value
+nums.every(num => num < 0);
