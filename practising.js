@@ -184,23 +184,23 @@ const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', '
 
 const nums = [1, 50, 75, 200, 350, 525, 1000];
 
-//Choose a method that will return undefined
+// Choose a method that will return undefined
 cities.forEach(city => console.log('Have you visited ' + city + '?'));
 
-//Choose a method that will return a new array
+// Choose a method that will return a new array
 const longCities = cities.filter(city => city.length > 7);
 
-//Choose a method that will return a single value
+// Choose a method that will return a single value
 const word = cities.reduce((acc, currVal) => {
   return acc + currVal[0]
 }, "C");
 
 console.log(word)
 
-//Choose a method that will return a new array
+// Choose a method that will return a new array
 const smallerNums = nums.map(num => num - 5);
 
-//Choose a method that will return a boolean value
+// Choose a method that will return a boolean value
 nums.every(num => num < 0);
 
 // Objects
@@ -222,7 +222,6 @@ console.log(isActive);
 // Methods
 let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
 
-// Write your code below
 let alienShip = {
   retreat() {
     console.log(retreatMessage)
@@ -318,3 +317,74 @@ for (let crewMember in spaceship.crew) {
 for (let crewMember in spaceship.crew) {
   console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`)
 };
+
+// Advanced Objects
+const robot = {
+  _energyLevel: 100,
+  recharge(){
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+  }
+};
+
+robot._energyLevel = 'high';
+robot.recharge()
+
+// Geters and Seters
+const person = {
+  _firstName: 'John',
+  _lastName: 'Doe',
+  get fullName() {
+    if (this._firstName && this._lastName){
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return 'Missing a first name or a last name.';
+    }
+  }
+}
+ 
+// To call the getter method: 
+person.fullName; // 'John Doe'
+
+const person1 = {
+  _age: 37,
+  set age(newAge){
+    if (typeof newAge === 'number'){
+      this._age = newAge;
+    } else {
+      console.log('You must assign a number to age');
+    }
+  }
+};
+
+// Factory functions
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+  return { 
+    name: name,
+    age: age, 
+    energySource: energySource,
+    scare() {
+      console.log(catchPhrase);
+    } 
+  }
+};
+
+const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+ghost.scare(); // 'BOO!'
+
+// Destructured assignment
+const robot1 = {
+  model: '1E78V2',
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log('Beep Boop');
+    },
+    fireLaser() {
+      console.log('Pew Pew');
+    },
+  }
+};
+
+const { functionality } = robot1;
+functionality.beep();
