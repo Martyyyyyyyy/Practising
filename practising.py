@@ -341,7 +341,6 @@ print('--------------------------------------')
 
 
 # Decorators
-
 def logtime(func):
     def wrapper():
         print('before')
@@ -371,7 +370,6 @@ annotation: int = 1
 
 
 # Exceptions
-
 try:
     result = 2 / 0
 except ZeroDivisionError:
@@ -418,7 +416,6 @@ animal_2.eat()
 
 
 # Operator overloading
-
 class Overloading:
     def __init__(self, name, age):
         self.name = name
