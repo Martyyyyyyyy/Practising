@@ -397,6 +397,7 @@ with open(filename, 'r') as file:
 num = [1, 2, 3, 4, 5]
 num_pow = [n ** 2 for n in num]
 print(num_pow)
+doubles_by_3 = [x * 2 for x in range(1, 6) if (x * 2) % 3 == 0]
 
 
 # Polymorphism
@@ -426,3 +427,7 @@ class Overloading:
 roger = Overloading('Roger', 5)
 syd = Overloading('Syd', 7)
 print(roger > syd)
+
+# Secret
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+print (garbled[::-2])
