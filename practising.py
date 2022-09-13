@@ -431,3 +431,56 @@ print(roger > syd)
 # Secret
 garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
 print (garbled[::-2])
+
+# Bitwise operators
+# The base 2 number system 
+print ("******")
+print (0b1 + 0b11)
+print (0b11 * 0b11)
+
+# Left Bit Shift (<<)  
+shift_right = 0b1100
+shift_left = 0b1
+
+shift_right = shift_right >> 2
+shift_left = shift_left << 2
+
+print (bin(shift_right))
+print (bin(shift_left))
+
+# some operations
+print (bin(0b1110 & 0b101))
+print (bin(0b1110 | 0b101))
+print (bin(0b1110 ^ 0b101)) 
+print (~123)
+
+def check_bit4(input):
+  mask = 0b1000
+  desired = input & mask
+  if desired > 0:
+    return "on"
+  else:
+    return "off"
+
+a = 0b10111011
+mask = 0b100
+desired = a | mask
+print (bin(desired))
+
+def flip_bit(number, n):
+  bit_to_flip = 0b1 << (n -1)
+  result = number ^ bit_to_flip
+  return bin(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
