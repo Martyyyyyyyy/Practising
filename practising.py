@@ -229,6 +229,18 @@ for i in range(3):
         print('#', end='')
     print()
 
+# Elegant loops
+count = 0
+while count <= 3: print(count); count += 1
+
+# While loops: lists
+python_topics = ["variables", "control flow", "loops", "modules", "classes"]
+length = len(python_topics)
+index = 0
+#Your code below: 
+while index < length:
+  print('I am learning about', python_topics[index])
+  index += 1
 
 # Break and continue
 items = [1, 2, 3, 4, 5]
