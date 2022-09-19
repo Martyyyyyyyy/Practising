@@ -539,14 +539,26 @@ for item in my_list:
 
 f.close()
 
+# Some interesting functions
+def append_sum(lst):
+  lst.append(lst[-1] + lst[-2])
+  lst.append(lst[-1] + lst[-2])
+  lst.append(lst[-1] + lst[-2])
+  return lst
 
+def double_index(lst, index):
+  if index >= len(lst):
+    return lst
+  else:
+    new_lst = lst[0:index] 
+  new_lst.append(lst[index]*2)
+  new_lst = new_lst + lst[index+1:]
+  return new_lst
 
-
-
-
-
-
-
-
-
+def middle_element(lst):
+  if len(lst) % 2 == 0:
+    sum = lst[int(len(lst)/2)] + lst[int(len(lst)/2) - 1]
+    return sum / 2
+  else:
+    return lst[int(len(lst)/2)]
 
