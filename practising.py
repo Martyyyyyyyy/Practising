@@ -562,3 +562,4 @@ def middle_element(lst):
   else:
     return lst[int(len(lst)/2)]
 
+# Advanced functions
