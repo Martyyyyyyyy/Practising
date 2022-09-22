@@ -563,3 +563,34 @@ def middle_element(lst):
     return lst[int(len(lst)/2)]
 
 # Advanced functions
+def reversed_list(lst1, lst2):
+  for index in range(len(lst1)):
+    if lst1[index] != lst2[len(lst2) - 1 - index]:
+      return False
+  return True
+
+def same_values(lst1, lst2):
+  new_lst = []
+  for index in range(len(lst1)):
+    if lst1[index] == lst2[index]:
+      new_lst.append(index)
+  return new_lst
+
+def max_num(nums):
+  maximum = nums[0]
+  for number in nums:
+    if number > maximum:
+      maximum = number
+  return maximum
+
+def larger_sum(lst1, lst2):
+  sum1 = 0
+  sum2 = 0
+  for number in lst1:
+    sum1 += number
+  for number in lst2:
+    sum2 += number
+  if sum1 >= sum2:
+    return lst1
+  else: 
+    return lst2
