@@ -583,14 +583,24 @@ def max_num(nums):
       maximum = number
   return maximum
 
+# Advanced loops
+
 def larger_sum(lst1, lst2):
   sum1 = 0
   sum2 = 0
-  for number in lst1:
-    sum1 += number
-  for number in lst2:
-    sum2 += number
+  for lst in lst1:
+    sum1 += lst
+  for lst in lst2:
+    sum2 += lst
   if sum1 >= sum2:
     return lst1
-  else: 
+  else:
     return lst2
+
+def over_nine_thousand(lst):
+  sum1 = 0
+  for number in lst:
+    sum1 += number
+    if sum1 > 9000: # could be dynamic (not only 9000)
+      break
+  return sum1
