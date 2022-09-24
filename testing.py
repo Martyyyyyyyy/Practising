@@ -57,4 +57,12 @@ for poem in highlighted_poems_details:
   dates.append(poem[2])
   
 for i in range(0,len(highlighted_poems_details)):
-    print('The poem {} was published by {} in {}'.format(titles[i], poets[i], dates[i]))
+  pass
+    # print('The poem {} was published by {} in {}'.format(titles[i], poets[i], dates[i]))
+
+
+
+import random
+numbers_a = range(1, 13)
+numbers_b = random.sample(numbers_a, range(1000))
+print(numbers_b)
