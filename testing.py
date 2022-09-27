@@ -60,9 +60,18 @@ for i in range(0,len(highlighted_poems_details)):
   pass
     # print('The poem {} was published by {} in {}'.format(titles[i], poets[i], dates[i]))
 
+diameter = 30
 
+def this_function_is_an_object(name):
+  return name
+
+print(this_function_is_an_object('Lol'))
+
+print(f"New circle with diameter: {diameter}")
 
 import random
+
 numbers_a = range(1, 13)
 numbers_b = random.sample(numbers_a, range(1000))
 print(numbers_b)
+
