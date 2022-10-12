@@ -75,3 +75,16 @@ numbers_a = range(1, 13)
 numbers_b = random.sample(numbers_a, range(1000))
 print(numbers_b)
 
+def reverse(s):
+    str = ""
+    for i in s:
+        str = i + str
+    return str
+  
+s = "Geeksforgeeks"
+  
+print("The original string is : ", end="")
+print(s)
+  
+print("The reversed string(using loops) is : ", end="")
+print(reverse(s))
