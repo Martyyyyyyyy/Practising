@@ -406,10 +406,10 @@ def logtime(func):
     return wrapper
 
 @logtime
-def hello():
+def hello1():
     print('hello, world!')
 
-hello()
+hello1()
 
 
 # Docstrings
