@@ -689,3 +689,28 @@ def solution(num1, num2):
 
     return str(n1 + n2)
 print(solution(num1, num2))
+
+
+def real_matr(A, R):
+    lis = sorted( list(A) )
+    matr = []
+    for i in range( len(lis) ):
+        row = []
+        for j in range( len(lis) ):
+            row.append( R( lis[i], lis[j] ) )
+        matr.append(row)
+    return matr
+
+def refl(matr):
+    for x in range( len(matr) ):
+        if not matr[x][x]:
+            return False
+    return True
+
+def antisymm(matr):
+    for x in range( len(matr) ):
+        for y in range( x, len(matr) ):
+            if matr[x][y] and matr[y][x]:
+                if x != y:
+                    return False
+    return True
