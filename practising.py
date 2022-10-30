@@ -3,8 +3,8 @@ from ctypes import resize
 import random
 from enum import Enum
 from functools import reduce
-import re
 from typing import overload
+import contextlib
 
 
 
@@ -714,3 +714,43 @@ def antisymm(matr):
                 if x != y:
                     return False
     return True
+
+# Nested comprehension:
+values = [[y*3 for y in range(x)] for x in range(10)]
+
+values = []
+for x in range(10):
+    inner = []
+    for y in range(x):
+        inner.append(y*3)
+    values.append(inner)
+
+
+@contextlib.contextmanager
+def propagater(name, propagate):
+    try:
+        yield
+        print(name, 'exited normally.')
+    except Exception:
+        print(name, 'received an exception!')
+        if propagate:
+            raise
+
+# Operator overloading
+
+class Point:
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+    
+    def __str__(self):
+        return "({0},{1})".format(self.x,self.y)
+    
+    def __add__(self,other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Point(x,y)
+
+p1 = Point(2,3)
+p2 = Point(-1,2)
+print(p1 + p2)
