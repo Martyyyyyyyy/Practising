@@ -651,8 +651,8 @@ def solution(sentence):
     words = sentence.split()
     return round(sum(len(word) for word in words)/len(words),2)
     
-print(solution(sentence1))
-print(solution(sentence2))
+# print(solution(sentence1))
+# print(solution(sentence2))
 
 # Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
 # You must not use any built-in BigInteger library or convert the inputs to integer directly.
@@ -754,3 +754,16 @@ class Point:
 p1 = Point(2,3)
 p2 = Point(-1,2)
 print(p1 + p2)
+
+print('\n\n')
+
+# reversed tree
+rows = 6
+for i in range(0, rows):
+    for j in range(rows - 1, i, -1):
+        print(j, '', end='')
+    for l in range(i):
+        print('   ', end='')
+    for k in range(i + 1, rows):
+        print(k, '', end='')
+    print('\n')
