@@ -16,6 +16,8 @@ dict = {'name': 'Tim', 'color': 'red', 'age': 25}
 food = ['pizza', 'carrots', 'eggs']
 dinner = random.choice(food)
 
+food2 = ['pizza', 'carrots', 'eggs']
+dinner2 = random.choice(food2)
 
 # Data Types
 name = 'Martin'
